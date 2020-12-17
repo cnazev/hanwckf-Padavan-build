@@ -24,9 +24,9 @@ jobs:
         DEBIAN_FRONTEND: noninteractive
       run: |
         sudo apt update
-        sudo apt install -y unzip libtool-bin curl cmake gperf gawk flex bison nano xxd \
-        cpio git python-docutils gettext automake autopoint texinfo build-essential help2man \
-        pkg-config zlib1g-dev libgmp3-dev libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev
+        sudo apt install -y unzip libtool-bin curl cmake gperf gawk flex bison nano xxd wget  \
+        cpio git python-docutils gettext automake autopoint texinfo build-essential help2man kmod \
+        pkg-config zlib1g-dev libc-dev-bin libgmp3-dev libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev
     - name: Clone source code
       run: |
         sudo git clone --depth=1 https://github.com/hanwckf/rt-n56u.git /opt/rt-n56u
